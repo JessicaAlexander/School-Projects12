@@ -1,0 +1,48 @@
+<!--
+--------------
+Programmer:  [Jessica Alexander]
+Course:      ITSE-1306 (Intro to PHP)
+Instructor:  Cesar "Coach" Marrero
+Assignment:  [Chapter 10]
+Description: [Use of header/footer and web pages]
+--------------
+-->
+
+<?php // Script 8.11 - header.html #3
+
+// Turn on output buffering:
+ob_start();
+
+?><!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
+  <title><?php // Print the page title.
+	if (defined('TITLE')) { // Is the title defined?
+		print TITLE;
+	} else { // The title is not defined.
+		print 'Raise High the Roof Beam! An Anti-PHP Fan Club!';
+	}
+	?></title>
+</head>
+<body>
+
+<header container class="siteHeader">
+  <div row>
+    <h1 column=4 class="logo"><a href="">Raise High the Roof Beam! An Anti-PHP Fan Club!</a></h1>
+    <nav column="8" class="nav">
+      <ul>
+        <li><a href="logout.php">Logout</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="customize.php">Customize</a></li>
+        <li><a href="reset.php">Reset</a></li>
+        <li><a href="welcome.php">Welcome</a></li>
+     </ul>
+    </nav>
+  </div>
+</header>
+
+  <main container class="siteContent">
